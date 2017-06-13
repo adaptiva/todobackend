@@ -106,7 +106,7 @@ buildtag:
 
 login:
 	${INFO} "Logging in to Docker registry $$DOCKER_REGISTRY..."
-	@ docker login --password $$DOCKER_PASSWORD --username $$DOCKER_USER $(DOCKER_REGISTRY_AUTH)
+	@ docker login --password "buildbuild" --username "adaptiva" $(DOCKER_REGISTRY_AUTH)
 	${INFO} "Logged in to Docker registry $$DOCKER_REGISTRY"
 
 logout:
