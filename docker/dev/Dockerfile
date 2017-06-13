@@ -1,5 +1,6 @@
-FROM jmenga/todobackend-base:latest
-MAINTAINER Justin Menga <justin.menga@gmail.com>
+FROM adaptiva/todobackend-base:latest
+MAINTAINER Adaptiva <petedmarshall@hotmail.com>
+
 
 # Install dev/build dependencies
 RUN apt-get update && \
