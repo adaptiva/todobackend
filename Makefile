@@ -2,7 +2,7 @@
 PROJECT_NAME ?= todobackend
 ORG_NAME ?= adaptiva
 REPO_NAME ?= todobackend
-DOCKER_USER ?=adaptiva
+
 
 # Filenames
 DEV_COMPOSE_FILE := docker/dev/docker-compose.yml
@@ -106,7 +106,7 @@ buildtag:
 
 login:
 	${INFO} "Logging in to Docker registry $$DOCKER_REGISTRY..."
-	@ docker login --username $(DOCKER_USER) --password $$DOCKER_PASSWORD $(DOCKER_REGISTRY_AUTH)
+	@ docker login --password $$DOCKER_PASSWORD --username $$DOCKER_USER $(DOCKER_REGISTRY_AUTH)
 	${INFO} "Logged in to Docker registry $$DOCKER_REGISTRY"
 
 logout:
