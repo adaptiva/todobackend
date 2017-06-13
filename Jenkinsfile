@@ -14,7 +14,7 @@ node {
         stage 'Tag and publish release image'
         sh "make tag latest \$(git rev-parse --short HEAD) \$(git tag --points-at HEAD)"
         sh "make buildtag master \$(git tag --points-at HEAD)"
-        withEnv(["DOCKER_USER=adaptiva",
+        withEnv(["DOCKER_USER=${DOCKER_USER}",
                  "DOCKER_PASSWORD=${DOCKER_PASSWORD}"]) {    
             sh "make login"
         }
